@@ -1,6 +1,4 @@
-#Assignment 3 Case Studies CT 5103
-#Marta Olszewska - 13101828
-#Suad Al Darra - 17234582
+
 
 library(dplyr)
 library(ckanr)
@@ -19,8 +17,8 @@ for (i in 2:length(data$resources)){
   if(year == 2018){
     dfTemp <- read.csv(data$resource[[i]]$url, header=F, sep=",")
   }
-  # if column name is 'ï..Archive.Date' change it to 'Archive.Date' - aesthetic reasons for further processing
-  colnames(dfTemp)[names(dfTemp) == "ï..Archive.Date"] <- "Archive.Date"
+  # if column name is 'Ã¯..Archive.Date' change it to 'Archive.Date' - aesthetic reasons for further processing
+  colnames(dfTemp)[names(dfTemp) == "Ã¯..Archive.Date"] <- "Archive.Date"
   dfTemp$Year <- year
   assign(VarName, dfTemp)
   
